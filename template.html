@@ -11,17 +11,17 @@
             box-sizing: border-box;
         }
 
-        }
         body{
             background-position: center;
             background-color:#fff;
             font-family: sans-serif;
+            
         }
         .heading{
-            margin: 20px;
-            margin-bottom: 10px;
+            margin: 10px;
             background:black;
             text-align: center;
+        
         }
         h1{
             font-size: 35px;
@@ -33,26 +33,36 @@
         }
         .main{
             text-align: center;
+            background-color: rgba(13, 125, 196, 0.363);
+            margin-left: 480px;
+            margin-right: 480px;
+            width: px;
+            box-shadow: 5px 3px 3px -0.1px;
+            padding-bottom: 20px;
+            padding-top: 10;
+            background-clip: padding-box;
+            }
+            button{
+            display:inline-block;
+            padding-right: 1em;
+            line-height: 1.2em;
+            
     
         }
-        .addme{
-            padding: 10px;
-        }
-        .addme form{
+        
+        .addme,form, p{
             padding: 5px;
         }
-        .addme h2{
-            text-decoration: palegreen;
-        }
+        .addm1{
+            text-decoration: underline;
         }
 
-        footer{
-            margin: 20px;
-            margin-bottom: 10px;
+        .footer{
+            margin: 10px;
             background:black;
             text-align: center;
             padding: 10px;
-            margin-bottom: 15;
+        
         }
         .copyright{
             color: #fff;
@@ -66,7 +76,7 @@
         <section class="heading">
             <div >
                 <p>
-                    <H1>Week 4: Add Two Numbers</H1>
+                    <h1>Week 3: Add Two Numbers</h1>
                 </p>
                 <h2 class="name">
                     Godson Morrison Halm
@@ -75,17 +85,17 @@
         </section>   
         <section class="main">
             <div class="addme">
-                <h2>Add Two Numbers</h2>
+                <h2 class="addm1">Add Two Numbers</h2>
                 <form action="#">
-                    Enter Number One: <input type="text">
-                    Enter Number Two: <input type="text">
+                    <p>Enter Number One: <input type="text" id="number1"></p>
+                    <p>Enter Number Two: <input type="text" id="number2"></p>
                 </form>
                 <Button type="button" onclick="">Add Numbers</Button>
             </div>
         </section>
   
     </section>
-    <footer>
+    <footer class="footer">
         <div class="copyright">&copy; . 2020 . BYU-Idaho . CIT 160</div>
     </footer>
 </body>
