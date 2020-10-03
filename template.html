@@ -6,97 +6,69 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        *{
-            margin: 0;
-            box-sizing: border-box;
-        }
+        body {
+	text-align: center;
+}
+header,
+footer {
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+}
 
-        body{
-            background-position: center;
-            background-color:#fff;
-            font-family: sans-serif;
-            
-        }
-        .heading{
-            margin: 10px;
-            background:black;
-            text-align: center;
-        
-        }
-        h1{
-            font-size: 35px;
-            padding: 0.5px;
-            color:#fff
-        }
-        .name{
-            color:bisque;
-        }
-        .main{
-            text-align: center;
-            background-color: rgba(13, 125, 196, 0.363);
-            margin-left: 480px;
-            margin-right: 480px;
-            width: px;
-            box-shadow: 5px 3px 3px -0.1px;
-            padding-bottom: 20px;
-            padding-top: 10;
-            background-clip: padding-box;
-            }
-            button{
-            display:inline-block;
-            padding-right: 1em;
-            line-height: 1.2em;
-            
-    
-        }
-        
-        .addme,form, p{
-            padding: 5px;
-        }
-        .addm1{
-            text-decoration: underline;
-        }
+footer {
+	font-size: 13px;
+	letter-spacing: 1.5pt;
+}
 
-        .footer{
-            margin: 10px;
-            background:black;
-            text-align: center;
-            padding: 10px;
-        
-        }
-        .copyright{
-            color: #fff;
-            text-size-adjust: 10px;
-        
-        }
+h1,
+h2 {
+	margin: 0;
+}
+
+h2, #currentdate {
+	color: yellow;
+}
+
+main {
+	margin: 10px auto;
+	border: 1px solid #999;
+	padding: 10px;
+	max-width: 500px;
+	background-color: #abe;
+	box-shadow: 0 0 30px;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid #333;
+	padding: 0;
+}
+
+label {
+	display: block;
+	margin: 5px;
+}
+
+
     </style>
 </head>
 <body>
-    <section>
-        <section class="heading">
-            <div >
-                <p>
-                    <h1>Week 3: Add Two Numbers</h1>
-                </p>
-                <h2 class="name">
-                    Godson Morrison Halm
-                </h2>
-            </div>
-        </section>   
-        <section class="main">
-            <div class="addme">
-                <h2 class="addm1">Add Two Numbers</h2>
-                <form action="#">
-                    <p>Enter Number One: <input type="text" id="number1"></p>
-                    <p>Enter Number Two: <input type="text" id="number2"></p>
-                </form>
-                <Button type="button" onclick="">Add Numbers</Button>
-            </div>
-        </section>
-  
-    </section>
-    <footer class="footer">
-        <div class="copyright">&copy; . 2020 . BYU-Idaho . CIT 160</div>
+    <header>
+        <h1>Week 4: Add Two Numbers</h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <h3>Add Two Numbers</h3>
+        <label>Enter Number One: <input type="text" id="number1"></label>
+      <label>Enter Number Two: <input type="text" id="number2"></label>
+        <label><button onclick="addNumbers()">Add Numbers</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2019 &bull; Student Name &bull; BYU-Idaho &bull; CIT 160
     </footer>
 </body>
 </html>
