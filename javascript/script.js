@@ -6,10 +6,10 @@
 
 function addNumbers() {
 	//INPUT
-	 let x = parseFloat(document.getElementById('number1').value);
-	 let y = parseFloat(document.getElementById('number2').value);
+	 let number1 = parseFloat(document.getElementById('number1').value);
+	 let number2 = parseFloat(document.getElementById('number2').value);
 	//PROCESSING
-	 let sum = x + y;
+	 let sum = number1 + number2;
 	//OUTPUT
-	 document.getElementById('output').innerHTML = "The sum of " + x + " and " + y + " equals " + sum + "!";
+	 document.getElementById('output').innerHTML = "The sum of " + number1 + " and " + number2 + " equals " + sum + "!";
 }
