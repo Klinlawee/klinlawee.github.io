@@ -5,5 +5,5 @@ function poundsTokilograms(){
     let kilogram = 0.45359237;
     let convertor = pound * kilogram;
     //OUTPUT
-     document.getElementById('output').innerHTML = convertor.toFixed(2) + " kg";
+     document.getElementById('output').innerHTML = convertor.toFixed(2) + " kilograms";
 }
