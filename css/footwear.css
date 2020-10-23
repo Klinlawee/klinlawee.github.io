@@ -3,7 +3,7 @@ body {
 }
 header,
 footer {
-	background-color: #000;
+	background-color: rgba(147, 187, 229, 0.877);
 	color: #fff;
 	padding: 10px;
 }
@@ -27,14 +27,15 @@ main {
 	border: 1px solid #999;
 	padding: 10px;
 	max-width: 500px;
-	background-color: #abe;
+	background-color: rgba(170, 238, 218, 0.719);
 	box-shadow: 0 0 30px;
+	border-radius: 20px;
 }
 
 h3 {
 	font-size: 24px;
 	margin: 0 0 15px 0;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid rgb(68, 189, 219);
 	padding: 0;
 }
 

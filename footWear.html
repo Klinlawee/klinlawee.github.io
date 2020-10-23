@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/footwear.css"> <!--external link to css style-->
+</head>
+<body>
+    <header>
+        <h1>Week 7 Footwear Selection</h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <h3>Footwear</h3>
+        <label>
+            <select name="wheather" id="wheather">
+                <option value="" disabled selected>--Select the wheather--</option>
+                <option value="rain">Rain</option>
+                <option value="hot">Hot</option>
+                <option value="snow">Snow</option>
+                <option value="unknown">Unknown</option>
+            </select>
+        </label>
+        <label><button onclick="getShoes()">Get Shoes</button></label>
+        <hr>
+        <p>Footwear: <span id="shoes"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script> 
+        function getShoes(){
+            let Shoes;
+            //input weather from combo box
+            let wheather = document.getElementById('wheather').value;
+            //processing
+            if (wheather ==="rain"){
+                shoes = "galoshes"
+            }else if (wheather === "hot"){
+                shoes = "sandals"
+            }else if (wheather === "snow"){
+                shoes = "boots"
+            }else
+                shoes === "unknown"
+            //display the result"Output"
+            document.getElementById('shoes').innerHTML = shoes;
+            }
+    </script>
+</body>
+</html>
