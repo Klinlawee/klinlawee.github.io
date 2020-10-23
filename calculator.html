@@ -8,14 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Week 4: Add Two Numbers</h1>
+        <h1>Week 6: Calculator</h1>
         <h2>Godson Morrison Halm</h2>
     </header>
     <main>
-        <h3>Add Two Numbers</h3>
+        <h3>Arithmetic Calculator</h3>
         <label>Enter Number One: <input type="text" id="number1"></label>
+        <label>
+            <select name="wheather" id="wheather">
+                <option value="" disabled selected>-Select a Operator for Calculation</option>
+                <option value="addme">Addition</option>
+                <option value="subtract">Subtraction</option>
+                <option value="multiply">Multiplication</option>
+                <option value="divide">Division</option>
+            </select>
+        </label>
         <label>Enter Number Two: <input type="text" id="number2"></label>
-        <label><button onclick="addNumbers()">Add Numbers</button></label>
+        <label><button onclick="addNumbers()">Calculator</button></label>
         <hr>
         <p>Output: <span id="output"></span></p>
     </main>
