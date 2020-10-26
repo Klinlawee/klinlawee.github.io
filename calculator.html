@@ -12,25 +12,70 @@
         <h2>Godson Morrison Halm</h2>
     </header>
     <main>
-        <h3>Arithmetic Calculator</h3>
-        <label>Enter Number One: <input type="text" id="number1"></label>
-        <label>
-            <select name="wheather" id="wheather">
-                <option value="" disabled selected>-Select a Operator for Calculation</option>
-                <option value="addme">Addition</option>
-                <option value="subtract">Subtraction</option>
-                <option value="multiply">Multiplication</option>
-                <option value="divide">Division</option>
-            </select>
-        </label>
-        <label>Enter Number Two: <input type="text" id="number2"></label>
-        <label><button onclick="addNumbers()">Calculator</button></label>
+<input type="text" id="oper1" value="">
+<select id="operx">
+    <option value="0">ADDITION</option>
+    <option value="1">SUBTRACTION</option>
+    <option value="2">MULTIPLICATION</option>
+    <option value="3">DIVISION</option>
+</select>
+<input type="text" id="oper2" value="">
+<input type="button" onClick="calc();" value="Solve"><br/><br/>
+<!--<p id="resul">The answer is : </p> -->
         <hr>
-        <p>Output: <span id="output"></span></p>
+        <p>Result: <span id="result"></span></p>
     </main>
     <footer>
         &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
     </footer>
-    <script src="javascript/script.js"></script>
+    <script>
+        //Processing
+        function plus(a,b) {
+                return (a + b);
+            }
+
+            function minus(a,b) {
+                return (a - b);
+            }
+
+            function multiply(a,b) {
+                return (a * b);
+            }
+
+            function divide(a,b) {
+                return (a / b);
+            }
+
+            function calc() {
+                //input
+                var w;
+                var x = parseFloat(document.getElementById("oper1").value);
+                var y = document.getElementById("operx").value;
+                var z = parseFloat(document.getElementById("oper2").value);
+                //document.getElementById("result").innerHTML=w;
+                //output
+                switch (y) {
+                    case '0':
+                        w = plus(x, z);
+                document.getElementById("result").innerHTML=w;
+                        break;
+                    case '1':
+                        w = minus(x, z);
+                document.getElementById("result").innerHTML=w;
+                        break;
+                    case '2':
+                        w = multiply(x, z);
+                document.getElementById("result").innerHTML=w;
+                        break;
+                    case '3':
+                        w = divide(x, z);
+                document.getElementById("result").innerHTML=w;
+                        break;
+                    default:
+                        w = "Don't really know..";
+                }
+
+            }
+    </script>
 </body>
 </html>
