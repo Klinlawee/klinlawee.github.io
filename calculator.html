@@ -12,15 +12,17 @@
         <h2>Godson Morrison Halm</h2>
     </header>
     <main>
-<input type="text" id="oper1" value="">
+<h3>Simple Arithmetic Calculator</h3>
+<label>Enter Number One<input type="text" id="oper1" value=""></label>
 <select id="operx">
+    <option value="" disabled selected>Select an operator</option>
     <option value="0">ADDITION</option>
     <option value="1">SUBTRACTION</option>
     <option value="2">MULTIPLICATION</option>
     <option value="3">DIVISION</option>
 </select>
-<input type="text" id="oper2" value="">
-<input type="button" onClick="calc();" value="Solve"><br/><br/>
+<label>Enter Number Two<input type="text" id="oper2"></label>
+<label><input type="button" onClick="calc();" value="Solve"></label>
 <!--<p id="resul">The answer is : </p> -->
         <hr>
         <p>Result: <span id="result"></span></p>
