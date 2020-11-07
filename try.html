@@ -1,27 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
-    <link rel="stylesheet" href="css/try.css"> 
+<meta charset="utf-8">
+<title>Prime Number</title>
+   
+<script>
+/* Input: an integer
+ * Processing: determine if the given integer is prime or not.
+ * Output: __ is prime OR __ is not prime
+ */
+function isPrime() {
+    let output1;
+let i = 0;
+while (i < 2) {
+    output1 += `Part 1:${i}<br>`;
+}
+document.getElementById('outputDiv').innerHTML = output1;
+}
+</script>
 </head>
 <body>
-    <header>
-        <h1>Week 5: Salary Calculator</h1>
-        <h2>Godson Morrison Halm</h2>
-    </header>
-    <main>
-        <h3>Add Two Numbers</h3>
-        <label>Enter Normal Hours: <input type="text" id="demo1"></label>
-        <label>Enter Overtime Hours: <input type="text" id="demo2"></label>
-        <label><button onclick="addNumbers()">Take Home</button></label>
-        <hr>
-        <p>Output: <span id="output"></span></p>
-    </main>
-    <footer>
-        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
-    </footer>
-    <script src="javascript/try.js"></script>
+    
+</body>
+Please enter an integer: <input type="text" id="integerBox"><br>  
+<button type="button" onclick="isPrime()">Is Prime</button>  
+<div id="outputDiv"></div>  
 </body>
 </html>

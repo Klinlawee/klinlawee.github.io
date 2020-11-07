@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body>
+    <header>
+        <h1>Week 7: Alarm Clock</h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <h3>Alarm for Today</h3>
+        <label><button onclick="alarmClock()">Alarm</button></label>
+        <hr>
+        <p>Alarm: <span id="alarm"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script src=>
+        function alarmClock(myNoun, myadjective, myVerb,myAdverb){
+            var result = "";
+            result += "The" + myadjective + myNoun + myVerb + " to the store " + myAdverb;
+            return result
+
+            document.getElementById('alarm').innerHTML = alarmClock("dog","big","ran","quickly");
+        }
+
+    </script>
+</body>
+</html>

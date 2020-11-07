@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body>
+    <header>
+        <h1>Week 4</h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <hr>
+        <input type="text" id="odd">
+        <label><button onclick="oddnumbers()">Add Odd Numbers</button></label>
+        <p id = "outputOdd"> </p>
+    </main>
+    <footer>
+        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+      function oddnumbers() {
+          //OUTPUT
+          let oddNum = document.getElementById('odd').value;
+         //PROCESSING
+         let sum = 0;
+         for (let i = 1; i <= oddNum; i++) {
+             if ((i % 2)==0) {
+                 continue;} 
+                     sum += i
+         }
+            
+            document.getElementById('outputOdd').innerHTML = sum;
+        }
+    </script>
+</body>
+</html>

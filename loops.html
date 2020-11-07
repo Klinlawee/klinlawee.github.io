@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/loops.css"> 
+</head>
+<body>
+    <header>
+        <h1>Week 8: Loops </h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <h3>My Loops</h3>
+        <label><button onclick="loopInAction()">Add Numbers</button></label>
+        <hr>
+        <div class ="grid">
+            <p id="output">Results: </p>
+            <p id="output2">Results: </p>
+        </div>
+    </main>
+    <footer>
+        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script >
+        function loopInAction () {
+            let limit = 100;
+            let message = "";
+            for (let i = 5; i < 100; i = i +5) {
+                message += `🚙 ${i} <br>`;
+            }
+
+            let message2 = "";
+            let i = 5;
+            while (i <= 100) {
+                message2 += `🧞‍♂️ ${i} <br>`;
+                i += 5;
+            }
+
+            document.getElementById('output').innerHTML = message;
+            document.getElementById('output2').innerHTML = message2;
+        }
+    </script>
+</body>
+</html>
