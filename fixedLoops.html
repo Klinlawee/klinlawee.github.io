@@ -16,9 +16,10 @@
         <button onclick="loopcorrect()"> Add Numbers </button>
         <hr>
         <div class ="grid">
-            <p id="display1">Results: </p>
-            <p id="display2">Results: </p>
-            <p id="display3">Results: </p>
+            <p id="display1">Results1: </p>
+            <p id="display2">Results2: </p>
+            <p id="display3">Results3: </p>
+            <p id="display4">Results4: </p>
         </div>
     </main>
     <footer>
@@ -26,32 +27,51 @@
     </footer>
     <script >
     function loopcorrect() {
-        //NUMBER 1
-        let   output1;
+        //PROBLEM 1
+        let output1;
         let i = 0;
         while (i < 2) {
           output1 += `Part 1:${i}<br>`;
           i++
         }
-        //NUMBER 2
+        //PROBLEM 2
         var output2;
-        for (let j = 0; j > 3; j++) {
-        if (j !== 2) {
-            output2 += `Part 2:${j}, `;
+        for (let j = 0; j < 3; j++) {
+            if (j !== 2) {
+                output2 += `Part 2:${j}, `;
         }
-        else {
-            output2 += `Part 2:${j}`;
-        }  
-        //NUMBER 3
+             else {
+                output2 += `Part 2:${j}`;
+         }  
+        }
+        //PROBLEM 3
         let output3 = "";
         for (let k = 0; k < 4; k++) {
             output3 += k + " ";
         }
-    }
+            //PROBLEM 4
+
+        let balance = 1000;
+        const rate = .10;
+        let n = 30;
+        for (let s = 0; s < n; s++) {
+            interest = balance * rate;
+            balance += interest;
+        }
+
+        /**PROBLEM 5
+        let i = 0;
+        while (i < 3); { //this is incorrect because a semicolon is place at the end of the while loop.
+         //valid statements (this is not the problem)
+         i++;
+        } **/
+
         //OUTPUT
         document.getElementById('display1').innerHTML = output1;
         document.getElementById('display2').textContent = output2;
-        document.getElementById('display3').textContent = output3; 
+        document.getElementById('display3').textContent = output3;
+        document.getElementById('display4').textContent = balance;
+ 
     }
     </script>
 </body>
