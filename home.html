@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body>
+    <header>
+        <h1>Week 7: Alarm Clock</h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <h3>My JavaScript coding</h3>
+        <label><button onclick="getResult()">Alarm</button></label>
+        <hr>
+        <p><span id="result"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function getResult() {
+            let answer = "";
+            for (let i = 1; i<=12; i++) {
+                answer += `5 × ${i} =` + 5 * i + "<br>";
+            }
+            document.getElementById('result').innerHTML = answer;
+        }
+    </script>
+</body>
+</html>
