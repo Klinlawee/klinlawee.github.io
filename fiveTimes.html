@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarm Clock</title>
+    <title>Five Times Table</title>
     <link rel="stylesheet" href="css/main.css"> 
 </head>
 <body>
@@ -23,8 +23,8 @@
     <script>
         function getResult() {
             let answer = "";
-            for (let i = 1; i<=12; i++) {
-                answer += `5 × ${i} = ` + 5 * i + "<br>";
+            for (let i = 1; i<=31; i++) {
+                answer += `5 × ${i} = ` + 2 * i + ";
             }
             document.getElementById('result').innerHTML = answer;
         }

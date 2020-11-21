@@ -1,33 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarm Clock</title>
-    <link rel="stylesheet" href="css/main.css"> 
+  <meta charset="utf-8">
+  <title>Title</title>
 </head>
 <body>
-    <header>
-        <h1>Week 7: Alarm Clock</h1>
-        <h2>Godson Morrison Halm</h2>
-    </header>
-    <main>
-        <h3>My JavaScript coding</h3>
-        <label><button onclick="getResult()">Alarm</button></label>
-        <hr>
-        <p><span id="result"></span></p>
-    </main>
-    <footer>
-        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
-    </footer>
-    <script>
-        function getResult() {
-            let answer = "";
-            for (let i = 1; i<=12; i++) {
-                answer += `5 × ${i} =` + 5 * i + "<br>";
+  <p>Please enter two numbers:</p>
+  <label for="">Start<input type="text" id="one" size="5"></label> <br>
+  <label>End<input type="text" id="two" size="5"></label> <br>
+  <label>Divisor<input type="text" id="three" size="5"></label>
+  <button type="button" onclick="logic()">Click</button>
+  <div id="output"></div>
+
+  <script>
+    function logic() {
+    // Input:
+    let output = "";
+    let start = parseFloat(document.getElementById('one').value);
+	let end = parseFloat(document.getElementById('two').value);
+	let divisor = parseFloat(document.getElementById('three').value);
+    let integer = ""; 
+        if(((start % divisor) ==0) && (end % divisor)==0) {
+            for (i = start; i <= end; i++) {
+                    output += i + " ";
+                }
             }
-            document.getElementById('result').innerHTML = answer;
-        }
-    </script>
+
+        
+    
+
+     // output:
+    document.getElementById('output').innerHTML=output;
+}
+  </script>
 </body>
 </html>

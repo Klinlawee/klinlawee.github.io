@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body>
+    <header>
+        <h1>Week 4: Add Two Numbers</h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <h3>Computing Winds Chill</h3>
+        <label>Enter Temperature: <input type="text" id="tempera"></label>
+        <label>Enter Windspeed: <input type="text" id="winds"></label>
+        <label><button onclick="doInputOutput()">doInputOutput</button></label>
+        <hr>
+        <p id="outputDiv1"></p>
+        <p id="outputDiv2"></p>
+    </main>
+    <footer>
+        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function doInputOutput(){
+            // get into variables the user's input
+            let temperature = parseInt(document.getElementById('tempera').value);
+            let windspeed = parseInt(document.getElementById('winds').value);
+            //Call the windchill function and store it in a variable
+            var text = "";
+            var f;
+            if ((windspeed < 3) || (temperature > 50)) {
+                text = `Either windspeed is too low or temperature is too high <br> Try Again!`;
+             }
+            else {
+                f = windChill(temperature, windspeed)
+        }
+
+    //Output
+    document.getElementById('outputDiv1').innerHTML = f;
+    document.getElementById('outputDiv2').innerHTML = text;
+        }
+        // calculate the windchill and return the result
+        function windChill(tempF, speed){
+            f = 35.74 + (0.6215 * tempF) - (35.75 * (speed ** 0.16)) + (0.4275 * tempF * (speed ** 0.16));
+            return Math.round(f * 10) / 10;
+        }
+    </script>
+</body>
+</html>

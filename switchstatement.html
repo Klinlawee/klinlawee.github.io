@@ -13,22 +13,24 @@
     </header>
     <main>
         <h3>Alarm for Today</h3>
-        <label><button onclick="alarmClock()">Alarm</button></label>
+        <label><button onclick="randomInteger()">Alarm</button></label>
         <hr>
-        <p>Alarm: <span id="alarm"></span></p>
+        <p>Alarm: <span id="outputDiv"></span></p>
     </main>
     <footer>
         &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
     </footer>
-    <script src=>
-        function alarmClock(myNoun, myadjective, myVerb,myAdverb){
-            var result = "";
-            result += "The" + myadjective + myNoun + myVerb + " to the store " + myAdverb;
-            return result
+    <script>
+    function randomInteger() {
+    let min = 5;
+    let max = 11;
 
-            document.getElementById('alarm').innerHTML = alarmClock("dog","big","ran","quickly");
-        }
+    // Call the Math.random and Math.floor functions.
+    let r = min + Math.floor(Math.random() * (max - min));
 
+    // Display the random integer for the user to see.
+    document.getElementById('outputDiv').innerHTML = r;
+}
     </script>
 </body>
 </html>
