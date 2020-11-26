@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invest</title>
+    <link rel="stylesheet" href="css/invest.css">
+</head>
+
+<body>
+    <header>
+        <h1>Investment Calculator</h1>
+        <h2>Godson Morrison Halm</h2>
+    </header>
+    <main>
+        <form>
+            <table>
+
+                <tr>
+                    <th>Amount borrowed (principal)</th>
+                    <th><input type="text" id="P" size="10"></th>
+                </tr>
+
+                <tr>
+                    <th>Annual interest rate (example: 0.02)</th>
+                    <th><input type="text" id="AR" size="10"></th>
+                </tr>
+
+                <tr>
+                    <th>Number of years</th>
+                    <th><input type="text" id="Y" size="10"></th>
+                </tr>
+
+                <tr>
+                    <th>Payments per year</th>
+                    <th><input type="text" id="PPY" size="10"></th>
+                </tr>
+
+                <tr>
+                    <th><button type="button" onclick="doPayment()">Compute payment</button></th>
+                    <div id="paymentDiv"></div>
+                    <th><input type="text" id="key" size="10"></th>
+                </tr>
+
+                <tr>
+                    <th>Number of payment paid to date</th>
+                    <th><input type="text" id="NPPD" size="10"></th>
+                </tr>
+
+                <tr>
+                    <th><button type="button" onclick="doBalance()">Compute payof amount</button></th>
+                    <div id="balanceDiv"></div>
+                    <th><input type="text" id="key2" size="10"></th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="reset">
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer>
+        &copy;2020 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        "use strict";
+        /* Defining Table
+         * Input - Principle, annualRate, years, period per year, number Of Payment Paid To Date .
+         * Process - Use function to Compute and return payment [p = (a*r)/(1-(1+r)**-n)] and 
+                     payoff amount[b = a*(1+r)**d - (p * ((1+r)**d - 1))/r].
+         * Output - Display Payment and Payoff amount
+         */
+
+        function doPayment() {
+            let principal = parseFloat(document.getElementById("P").value);
+            let annualRate = parseFloat(document.getElementById("AR").value);
+            let years = parseFloat(document.getElementById("Y").value);
+            let periodPerYear = parseFloat(document.getElementById("PPY").value);
+            let p = computePayment(principal, annualRate, years, periodPerYear);
+
+            var a = document.getElementById("paymentDiv").innerHTML;
+            a = a + p;
+            document.getElementById("key").value = a;
+
+        }
+
+        function doBalance() {
+            let principal = parseFloat(document.getElementById("P").value);
+            let annualRate = parseFloat(document.getElementById("AR").value);
+            let years = parseFloat(document.getElementById("Y").value);
+            let periodPerYear = parseFloat(document.getElementById("PPY").value);
+            let numberOfPaymentPaidToDate = parseFloat(document.getElementById("NPPD").value);
+            let b = computeBalance(principal, annualRate, years, periodPerYear, numberOfPaymentPaidToDate);
+
+            var a = document.getElementById("balanceDiv").innerHTML;
+            a = a + b;
+            document.getElementById("key2").value = a;
+        }
+
+        function computePayment(principal, annualRate, years, periodPerYear) {
+            let a = principal;
+            let r = annualRate / periodPerYear;
+            let y = years;
+            let n = periodPerYear * years;
+            let p = (a * r) / (1 - (1 + r) ** -n);
+            return p.toFixed(2);
+
+        }
+        function computeBalance(principal, annualRate, years, periodPerYear, numberOfPaymentPaidToDate) {
+            var p = computePayment(principal, annualRate, years, periodPerYear);
+            let a = principal;
+            let r = annualRate / periodPerYear;
+            let y = years;
+            let n = periodPerYear * years;
+            let d = numberOfPaymentPaidToDate;
+
+            let b = a * (1 + r) ** d - (p * ((1 + r) ** d - 1)) / r;
+            return b.toFixed(2);
+
+        }
+    </script>
+</body>
+
+</html>
