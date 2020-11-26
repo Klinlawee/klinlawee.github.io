@@ -1,0 +1,17 @@
+body{
+    background-color: ghostwhite;
+}
+main {
+	border: 1px solid #999;
+	padding: 10px;
+	max-width: 500px;
+	background-color: rgb(231, 233, 240);
+	box-shadow: 0 0 30px;
+}
+label {
+	display: block;
+	margin: 5px;
+}
+input,button{
+	padding: .5rem;
+}
