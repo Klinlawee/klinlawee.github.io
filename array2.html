@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Student ID to Name</title>
+    <script>
+        /* Defining Table
+         * Input: no user input
+         * Processing: Test the countEvens and multiply functions by calling them.
+         * Output: The values returned from the countEvens and multiply functions.
+         */
+        function test() {
+            let list1 = [17, 8, 9, 5, 20];
+            let list2 = [12, 4, 8, 15, 17, 5, 20, 11];
+
+            // Test the countEvens function by calling it two times.
+            let count1 = countEvens(list1);
+            let count2 = countEvens(list2);
+
+            // Test the multiply function by calling it two times.
+            let mult1 = multiply(list1, 3);
+            let mult2 = multiply(list2, 4);
+
+            // Build a string to display to the user.
+            let output =
+                count1 + '<br>' +
+                count2 + '<br>' +
+                mult1 + '<br>' +
+                mult2;
+
+                // Display the output string for the user to see.
+                document.getElementById('result').innerHTML = output;
+        }
+        function countEvens(list1) {
+            let the_evens = list1.filter(number => number % 2 == 0)
+            return the_evens.length
+        }
+        function multiply(list,multiplier ) {
+            for (let i = 0; i < list.length; i++) {
+                list[i] *= multiplier;
+            }
+            return list
+        }
+        /*2
+4
+51,24,27,15,60
+48,16,32,60,68,20,80,*/
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="test()">Compute</button>
+    <div id="result"></div>
+</body>
+
+</html>
