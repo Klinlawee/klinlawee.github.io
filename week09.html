@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ten Largest and their Population</title>
+
+    <style>
+        *body {
+            text-align: center;
+        }
+
+        header,
+        footer {
+            background-color: rgba(147, 187, 229, 0.877);
+            color: #fff;
+            padding: 10px;
+        }
+
+        footer {
+            font-size: 13px;
+            letter-spacing: 1.5pt;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+            text-align: center;
+        }
+
+        h2,
+        #currentdate {
+            color: whitesmoke;
+        }
+
+        main {
+            margin: 10px auto;
+            border: 1px solid #999;
+            padding: 10px;
+            max-width: 500px;
+            background-color: rgba(170, 229, 238, 0.565);
+            box-shadow: 0 0 30px;
+            border-radius: 20px;
+        }
+        
+        label {
+            display: block;
+            margin: 5px;
+        }
+
+        input,
+        button {
+            padding: .5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <h1>Ten Largest Cities and their Population</h1>
+            <h2>AJAX Assignment</h2>
+        </header>
+
+        <main>
+            <label>
+                <select name="country" id="country">
+                    <option value="" disabled selected>--Select the Country--</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="russia">Russia</option>
+                    <option value="usa">U.S.A</option>
+                    <option value="canada">Canada</option>
+                </select>
+            </label>
+            <label><button onclick="getCountry()">Get Cities</button></label>
+            <label><button onclick="hideCountry()">Refresh</button></label>
+
+            <hr>
+
+            <p id="demo"></p>
+        </main>
+
+        <footer>
+            &copy;2021 &bull;Godson Morrison Halm &bull; BYU-Idaho &bull; CS 213
+        </footer>
+        <script>
+            function getCountry() {
+                var xmlHttp = new XMLHttpRequest();
+                let country = document.getElementById("country").value;
+                if (country === "mexico") {
+                    xmlHttp.open("GET", "mexico.html", false);
+                    xmlHttp.send(null);
+                } else if (country === "russia") {
+                    xmlHttp.open("GET", "russia.html", false);
+                    xmlHttp.send(null);
+                } else if (country === "usa") {
+                    xmlHttp.open("GET", "usa.html", false);
+                    xmlHttp.send(null);
+                } else if (country === "canada") {
+                    xmlHttp.open("GET", "canada.html", false);
+                    xmlHttp.send(null);
+                } else
+                    country = "unknown"
+                //display the result"Output"
+                var element = document.getElementById("demo").innerHTML = xmlHttp.responseText;
+            }
+            function hideCountry()
+            {
+                var element = document.getElementById("demo").innerHTML = " ";
+            }
+        </script>
+    </body>
+
+</html>
