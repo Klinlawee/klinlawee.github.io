@@ -45,7 +45,7 @@
             box-shadow: 0 0 30px;
             border-radius: 20px;
         }
-        
+
         label {
             display: block;
             margin: 5px;
@@ -78,11 +78,16 @@
                 </select>
             </label>
             <label><button onclick="getCountry()">Get Cities</button></label>
-            <label><button onclick="hideCountry()">Refresh</button></label>
 
+
+
+            <input type="text" placeholder="Enter url" id="student" value="json.txt">
+            <label><button onclick="studentDetails()">Student Info</button></label>
             <hr>
 
             <p id="demo"></p>
+            <div id="json"></div>
+            <label><button onclick="hideCountry()">Refresh</button></label>
         </main>
 
         <footer>
@@ -104,15 +109,29 @@
                 } else if (country === "canada") {
                     xmlHttp.open("GET", "canada.html", false);
                     xmlHttp.send(null);
-                } else
-                    country = "unknown"
+                } else {
+                    country = " Unknow option";
+                }
                 //display the result"Output"
                 var element = document.getElementById("demo").innerHTML = xmlHttp.responseText;
             }
-            function hideCountry()
-            {
+            function hideCountry() {
                 var element = document.getElementById("demo").innerHTML = " ";
             }
+
+            function studentDetails() {
+
+                var obj = document.getElementById("student").value;
+                var jsonFile = JSON.parse(obj);
+
+                if (jsonFile == "json.txt"); {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.open("GET", "json.txt", false);
+                    xmlhttp.send(null);
+                }
+                var result = document.getElementById('json').innerHTML = xmlhttp.responseText;
+            }
+
         </script>
     </body>
 
